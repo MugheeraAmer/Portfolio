@@ -1,0 +1,234 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Sora", sans-serif;
+  font-weight: 400;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-color: #011936ff;
+  --secondary-color: #ed254eff;
+  --tertiary-color: #f4fffdff;
+  --primary-color-opaque: rgba(1, 25, 54, 0.5);
+  --secondary-color-opaque: rgb(237, 37, 78, 0.5);
+  --text-color-dark: black;
+  --text-color-light: #f4fffdff;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  /* overflow: hidden; */
+}
+
+.page {
+  height: 100vh;
+  width: 100vw;
+  /* background: radial-gradient(#f4fffdff, black); */
+}
+.bg {
+  background: var(--tertiary-color);
+  color: var(--text-color-dark);
+}
+.bg-dark {
+  background: var(--primary-color);
+  color: var(--text-color-light);
+}
+
+.bg-medium {
+  background: var(--secondary-color);
+  color: var(--text-color-dark);
+}
+
+.heading-1 {
+  font-size: 4rem;
+}
+.heading-2 {
+  font-size: 2rem;
+}
+
+.font-heavy {
+  font-weight: 900;
+}
+
+.flex-class-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.btn {
+  display: inline-block;
+  width: 10rem;
+  height: 4rem;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 900;
+  background: none;
+  color: var(--text-color-light);
+  border: 0;
+  transition: 500ms;
+  transition-property: background, color;
+}
+.btn:hover {
+  background: var(--secondary-color);
+  color: var(--text-color-dark);
+}
+
+/* Main page CSS */
+/* Nav-Bar CSS */
+#nav-bar {
+  position: fixed;
+  display: flex;
+  width: 100vw;
+  background: var(--primary-color-opaque);
+}
+
+.nav-list {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  z-index: 1;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  padding: 1.4rem;
+  border: 0;
+}
+
+/* Main Page Content Css */
+.main-content {
+  background: url("/img/bg-img-main.jpg") no-repeat center center/cover;
+  height: 100%;
+  width: 100%;
+}
+.main-container-intro {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
+.main-heading {
+  display: inline-block;
+  text-align: left;
+  margin-left: 0rem;
+  margin-bottom: 5rem;
+  color: #fff;
+  opacity: 0;
+  animation: heading-animation 2s forwards;
+}
+
+@keyframes heading-animation {
+  to {
+    opacity: 1;
+    margin-left: 5rem;
+  }
+}
+
+.btn-contact {
+  margin-left: 5rem;
+}
+
+/* About Me Page CSS */
+#about-me-page .page {
+  display: flex;
+}
+
+.about-me-info {
+  width: 70%;
+  height: 70%;
+  margin: auto;
+  border-radius: 5rem;
+  background: rgba(35, 32, 35, 0.5);
+  color: #f4fffdff;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-me-p {
+  text-align: center;
+  font-size: 2rem;
+  padding: 0 2rem;
+  margin: auto;
+}
+.about-me-details {
+  width: 100%;
+  margin: auto;
+  display: flex;
+}
+
+.about-me-details-left,
+.about-me-details-right {
+  width: 50%;
+  font-size: 2rem;
+}
+.about-me-details-left ul li {
+  margin-left: 4rem;
+  font-size: 1.5rem;
+}
+
+.about-me-icons-detail {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  list-style: none;
+}
+.about-me-details-right {
+  display: flex;
+  flex-direction: column;
+}
+.about-me-details-right .resume-op,
+.about-me-details-right ul {
+  margin: auto;
+}
+
+.about-me-icons {
+  list-style: none;
+}
+.about-me-icons li {
+  margin: 1rem;
+}
+
+.icon a {
+  font-size: 5rem;
+
+  color: #f4fffdff;
+  transition: 500ms;
+  transition-property: color;
+}
+.icon a:hover {
+  color: #ed254eff;
+}
+
+.skills-details {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.bar {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  width: 10%;
+  height: 1rem;
+  background: var(--tertiary-color);
+}
+
+.bar-animation {
+  animation: animate-bars 3s forwards ease-in;
+}
+
+@keyframes animate-bars {
+  to {
+    width: 50%;
+    background: var(--secondary-color);
+  }
+}
