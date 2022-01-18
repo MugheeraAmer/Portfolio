@@ -18,10 +18,9 @@
 }
 
 body {
-  display: flex;
-  flex-direction: row;
   overflow: hidden;
 }
+
 .bg {
   background: var(--tertiary-color);
   color: var(--text-color-dark);
@@ -71,17 +70,17 @@ body {
   color: var(--text-color-dark);
 }
 
-/* Main page CSS */
 /* Nav-Bar CSS */
 #nav-bar {
   position: fixed;
   display: flex;
   width: 100vw;
+  z-index: 2;
 }
 
 .nav-list {
   margin: auto;
-  background: var(--primary-color-opaque);
+  background: #333;
   display: flex;
   flex-direction: row;
   list-style: none;
@@ -94,13 +93,17 @@ body {
 }
 
 /* Main Page Content Css */
+
 .main-content {
   height: 100vh;
   width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-items: center center;
-  background: url("/img/bg-main-img.jpg") no-repeat center center/cover;
+  /* background: url("/img/bg-main-img.jpg") no-repeat center center/cover; */
 }
 
 .main-heading {
@@ -131,7 +134,7 @@ body {
   margin: 0.5rem 0;
   text-align: center;
   animation: list-animation 2s forwards ease;
-  transform: translateX(5rem);
+  transform: translateX(10rem);
   opacity: 0;
 }
 
@@ -159,23 +162,48 @@ body {
   }
 }
 
+.background-slide-main {
+  position: absolute;
+  background: var(--primary-color);
+  height: 100%;
+  width: 50%;
+  right: 0;
+  top: 0;
+  transform: skew(45deg);
+}
+
 .btn-contact {
   margin-left: 5rem;
 }
 
 /* About Me Page CSS */
+
 .about-me-container {
   background: var(--tertiary-color);
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   width: 100vw;
   height: 100vh;
 }
+.background-slide-container {
+  position: absolute;
+  background: var(--primary-color-opaque);
+  height: 100%;
+  width: 50%;
+  right: 0;
+  top: 0;
+  transform: skew(45deg);
+}
 
 .about-me-info {
+  position: relative;
+  z-index: 1;
   margin: auto;
   width: 0%;
   height: 80%;
-  background: var(--primary-color-opaque);
+  background: var(--primary-color);
   color: var(--text-color-light);
   display: flex;
   flex-direction: column;
@@ -254,11 +282,25 @@ body {
   width: 100vw;
   height: 100vh;
   display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.background-slide-skill {
+  position: absolute;
+  background: var(--primary-color-opaque);
+  height: 100%;
+  width: 50%;
+  right: 0;
+  top: 0;
+  transform: skew(135deg);
 }
 
 .skills-content {
   margin: auto;
-  background: var(--primary-color-opaque);
+  background: var(--primary-color);
   height: 80%;
   width: 80%;
   display: grid;
@@ -346,4 +388,15 @@ body {
     background: var(--secondary-color);
     opacity: 1;
   }
+}
+.show {
+  visibility: visible;
+  opacity: 1;
+  transition: all 1s ease;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s ease;
 }

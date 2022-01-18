@@ -16,23 +16,23 @@
     <nav id="nav-bar" class="">
       <ul class="nav-list">
         <li>
-          <a href="#main-page" class="btn">Home</a>
+          <a href="#main-page" class="btn home-btn">Home</a>
         </li>
         <li>
-          <a href="#about-me-page" class="btn" >About Me </a>
+          <a href="#about-me-page" class="btn about-me-btn" >About Me </a>
         </li>
         <li>
-          <a href="#skills-page" class="btn">Skills</a>
+          <a href="#skills-page" class="btn skills-btn">Skills</a>
         </li>
       </ul>
     </nav>
-    <section id="main-page" class="bg">
-      
+    <section id="main-page" class="show">
+      <div class="background-slide-main"></div>
         <div class="main-content">
           <h1 class="heading-1 main-heading">
             Hi,<br />
-            I'm Mugheera,<br />
-            Software Developer.
+            I'm Mugheera.<br />
+            A Software Developer.
           </h1>
           <ul class="prog-lang">
             <li><i class="fab fa-js"></i></li>
@@ -42,18 +42,22 @@
             <li><i class="fab fa-css3-alt"></i></li>
           </ul>
         </div>
+        
       </div>
+
     </section>
-    <section id="about-me-page" >
+    <section id="about-me-page"  class="hidden">
       <div class="about-me-container">
+        <div class="background-slide-container"></div>
         <div class="about-me-info">
           <p class="about-me-p">
-            Hi, I am Mugheera Ameer, I am a software developer from Pakistan.
+            
+            "Hi, I am Mugheera Ameer, I am a software developer from Pakistan.
             <br />
             Aiming to be an excellent software developer one day. Working tirelessly to achieve my goals.
              I am currently putting effort into my front-end development skills. 
              This portfolio is one of many projects I will be developing in near future.
-              I have uploaded my resume for viewing.
+              I have uploaded my resume for viewing."
           </p>
           <div class="about-me-details">
             <div class="about-me-details-left">
@@ -103,8 +107,9 @@
         </div>
       </div>
     </section>
-    <section id="skills-page">
+    <section id="skills-page" class="hidden">
       <div class="skills-container">
+        <div class="background-slide-skill"></div>
         <div class="skills-content">
           <div class="skill-p">
             <p>Since beginning my journey as a frontend developer about a year ago, 
