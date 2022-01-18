@@ -4,12 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@100&display=swap"
-      rel="stylesheet"
-    />
     <link rel="shortcut icon" href="/img/favicon.ico" />
     <link rel="stylesheet" href="/css/style.css" />
     <script
@@ -19,41 +13,47 @@
     <title>Mugheera Ameer</title>
   </head>
   <body>
+    <nav id="nav-bar" class="">
+      <ul class="nav-list">
+        <li>
+          <a href="#main-page" class="btn">Home</a>
+        </li>
+        <li>
+          <a href="#about-me-page" class="btn" >About Me </a>
+        </li>
+        <li>
+          <a href="#skills-page" class="btn">Skills</a>
+        </li>
+      </ul>
+    </nav>
     <section id="main-page" class="bg">
-      <div class="page">
-        <nav id="nav-bar" class="">
-          <ul class="nav-list">
-            <li>
-              <a href="#main-page" class="btn">Home</a>
-            </li>
-            <li>
-              <a href="#about-me-page" class="btn">About Me </a>
-            </li>
-            <li>
-              <a href="#skills-page" class="btn">Skills</a>
-            </li>
-          </ul>
-        </nav>
+      
         <div class="main-content">
-          <div class="main-container-intro">
-            <h1 class="heading-1 main-heading">
-              Hi,<br />
-              I'm Mugheera,<br />
-              Software Developer.
-            </h1>
-          </div>
+          <h1 class="heading-1 main-heading">
+            Hi,<br />
+            I'm Mugheera,<br />
+            Software Developer.
+          </h1>
+          <ul class="prog-lang">
+            <li><i class="fab fa-js"></i></li>
+            <li><i class="fab fa-react"></i></li>
+            <li><i class="fab fa-python"></i></li>
+            <li><i class="fab fa-html5"></i></li>
+            <li><i class="fab fa-css3-alt"></i></li>
+          </ul>
         </div>
       </div>
     </section>
-    <section id="about-me-page" class="">
-      <div class="page">
+    <section id="about-me-page" >
+      <div class="about-me-container">
         <div class="about-me-info">
           <p class="about-me-p">
             Hi, I am Mugheera Ameer, I am a software developer from Pakistan.
             <br />
-            Aiming to be an excellent software developer one day. For me to
-            explain my interest in computer science will need some storytelling
-            and an unusual one to say the least.
+            Aiming to be an excellent software developer one day. Working tirelessly to achieve my goals.
+             I am currently putting effort into my front-end development skills. 
+             This portfolio is one of many projects I will be developing in near future.
+              I have uploaded my resume for viewing.
           </p>
           <div class="about-me-details">
             <div class="about-me-details-left">
@@ -104,14 +104,46 @@
       </div>
     </section>
     <section id="skills-page">
-      <div class="page">
-        <div class="skills-details">
-          <p>skill 1</p>
-          <div class="bar bar-animation"></div>
-          <p>skill 2</p>
-          <div class="bar"></div>
-          <p>skill 3</p>
-          <div class="bar"></div>
+      <div class="skills-container">
+        <div class="skills-content">
+          <div class="skill-p">
+            <p>Since beginning my journey as a frontend developer about a year ago, 
+              I have worked on small projects but will like to work in a professional environment to improve my skills. 
+              I create successful responsive websites that are fast, easy to use, and built with best practices. 
+              The main area of my expertise is front-end development, HTML, CSS, JS.</p>
+          </div>
+          <div class="skills-progress">
+            <ul>
+              <li>
+                <h3>Java Script</h3>
+                <div>
+
+                  <div  class="bar-js"></div>
+                </div>
+              </li>
+              <li>
+                <h3>HTML5</h3>
+                <div>
+
+                  <div  class="bar-html"></div>
+                </div>
+              </li>
+              <li>
+                <h3>CSS3</h3>
+                <div>
+
+                  <div  class="bar-css"></div>
+                </div>
+              </li>
+              <li>
+                <h3>Python</h3>
+                <div>
+
+                  <div  class="bar-python"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
